@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Adventure Game</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>{{ room['name'] }}</h1>
+    <p>{{ room['desc'] }}</p>
+    
+    <form action="/move" method="POST">
+        <input type="hidden" name="current_room" value="{{ room_name }}">
+        <label for="direction">Choose a direction:</label>
+        <select name="direction" id="direction">
+            {% for exit in room['exits'] %}
+                <option value="{{ exit['exit'] }}">{{ exit['exit'] }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Go</button>
+    </form>
+    
+    <h2>Inventory:</h2>
+    <ul>
+        {% for item in inventory %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

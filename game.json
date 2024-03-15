@@ -1,0 +1,319 @@
+{
+	"START": {
+		"name": "Beach",
+		"desc": "You wake up and find yourself on the beach, you must've \nfallen asleep. There isn't a cloud in the sky, you can \nhear seagulls in the distance and you can smell food from the boardwalk \nto the east. You can go in any direction.",
+		"exits": [
+			{
+				"exit": "WEST",
+				"target": "MORE BEACH"
+			},{
+				"exit": "SOUTH",
+				"target": "BOARDWALK"
+			},{
+				"exit": "NORTH",
+				"target": "OCEAN"
+			},{
+				"exit": "EAST",
+				"target": "MORE BEACH"
+			}
+		]
+	}
+	,"MORE BEACH": {
+		"name": "Beach",
+		"desc": "You walk further down the shoreline, but it doesn't seem like anything interesting\n will happen if you keep walking this way. But ther is the ocean to\n the north and the boardwalk to the south.",
+		"exits": [
+			{
+				"exit": "EAST",
+				"target": "START"
+			},{
+				"exit": "WEST",
+				"target": "MORE BEACH"
+			},{
+				"exit": "SOUTH",
+				"target": "BOARDWALK"
+			},{
+				"exit": "NORTH",
+				"target": "OCEAN"
+			}
+
+		]
+	},"OCEAN": {
+		"name": "Ocean",
+		"desc": "You wade into the water, suprisingly, it isn't cold...or maybe that's \njust a warm spot. Ew. I'd swim in a different direction if I were you.",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "DEEPER OCEAN"
+			},{
+				"exit": "EAST",
+				"target": "REEF"
+			},{
+				"exit": "SOUTH",
+				"target": "START"
+			},{
+				"exit": "WEST",
+				"target": "COOL FISH"
+			}
+
+		]
+	},"BOARDWALK": {
+		"name": "Boardwalk",
+		"desc": "You walk towards the boardwalk, you can hear kids laughing at the carnival further south.\nThere's also a very good looking hot dog stand to the east.",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "START"
+			},{
+				"exit": "EAST",
+				"target": "HOT DOG"
+			},{
+				"exit": "SOUTH",
+				"target": "CARNIVAL"
+			}
+
+		]
+	},"HOT DOG": {
+		"name": "Hot Dog Stand",
+		"desc": "You eat a hot dog, it's the best thing you've had in your life. The vendor mutters about something in the ocean",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "BOARDWALK"
+			},{
+				"exit": "EAST",
+				"target": "NO"
+			},{
+				"exit": "SOUTH",
+				"target": "CARNIVAL"
+			},{
+				"exit": "WEST",
+				"target": "BOARDWALK"
+			}
+
+		]
+	},"NO": {
+		"name": "Hot Dog Stand",
+		"desc": "You can't go this way.",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "BOARDWALK"
+			},{
+				"exit": "EAST",
+				"target": "NO"
+			},{
+				"exit": "SOUTH",
+				"target": "CARNIVAL"
+			},{
+				"exit": "WEST",
+				"target": "BOARDWALK"
+			}
+
+		]
+	},"CARNIVAL": {
+		"name": "Carnival",
+		"desc": "You walk through the carnival, there's kids running around from ride to ride with \ntheir parents close behind. The carnies loudly advertise their games \nfrom all sides except the north. Otherwise it seems like a dead end. ",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "BOARDWALK"
+			},{
+				"exit": "EAST",
+				"target": "HOT DOG STAND"
+			},{
+				"exit": "SOUTH",
+				"target": "NO2"
+			},{
+				"exit": "WEST",
+				"target": "NO2"
+			}
+
+		]
+	},"NO2": {
+		"name": "Same place",
+		"desc": "There's nothing cool this way.",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "CARNIVAL"
+			},{
+				"exit": "EAST",
+				"target": "NO2"
+			},{
+				"exit": "SOUTH",
+				"target": "NO2"
+			},{
+				"exit": "WEST",
+				"target": "NO2"
+			}
+
+		]
+	},"SWIMWRONGWAY": {
+		"name": "Ocean",
+		"desc": "Nothing in this direction. But there's still something over the waves to the north.",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "SHIP"
+			},{
+				"exit": "EAST",
+				"target": "SWIMWRONGWAY"
+			},{
+				"exit": "SOUTH",
+				"target": "OCEANBACK"
+			},{
+				"exit": "WEST",
+				"target": "SWIMWRONGWAY"
+			}
+
+		]
+	},"OCEANBACK": {
+		"name": "Ocean",
+		"desc": "You swim back towards shore,the waves are shallow.",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "DEEPER OCEAN"
+			},{
+				"exit": "EAST",
+				"target": "REEF"
+			},{
+				"exit": "SOUTH",
+				"target": "START"
+			},{
+				"exit": "WEST",
+				"target": "COOL FISH"
+			}
+
+		]
+	},"COOL FISH": {
+		"name": "Ocean",
+		"desc": "Theres a fish in front of you like nothing you've ever seen before. It swims up to you\n and you realize it wants to show you something. Do you follow it? YES or NO",
+		"exits": [
+			{
+				"exit": "YES",
+				"target": "SHIP"
+			},{
+				"exit": "NO",
+				"target": "OCEANBACK"
+			}
+
+		]
+	},"REEF": {
+		"name": "Coral Reef",
+		"desc": "Underwater, you can see a colorful reef with fish swimming in and out of visibility. It's very pretty. ",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "SWIMWRONGWAY"
+			},{
+				"exit": "EAST",
+				"target": "COOL FISH"
+			},{
+				"exit": "SOUTH",
+				"target": "SWIMWRONGWAY"
+			},{
+				"exit": "WEST",
+				"target": "DEEPER OCEAN"
+			}
+
+		]
+	},"DEEPER OCEAN": {
+		"name": "Deeper Ocean",
+		"desc": "You swim further out and the waves start to get bigger. It seems like \nthere's something in the water to the north but you can't get a \ngood glimpse of it.",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "SHIP"
+			},{
+				"exit": "EAST",
+				"target": "SWIMWRONGWAY"
+			},{
+				"exit": "SOUTH",
+				"target": "OCEAN"
+			},{
+				"exit": "WEST",
+				"target": "COOL FISH"
+			}
+
+		]
+	},"SHIP": {
+		"name": "ship",
+		"desc": "A giant wave crashes over you, and when you resurface there's a giant \npirate ship looming above. You hear people above yelling about a man overboard \nand before you know it, you're hoisted up to the deck. You're very confused but \nthe pirates insist you're one of them. Deciding to go with the flow, you \nshrug and put on a bandana. You look fantasitc. The treasure could be in any\ndirection but most likely not south. ",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "SAILING"
+			},{
+				"exit": "EAST",
+				"target": "END"
+			},{
+				"exit": "SOUTH",
+				"target": "TOLDYOU"
+			},{
+				"exit": "WEST",
+				"target": "SAILING"
+			}
+
+		]
+	},"TOLDYOU": {
+		"name": "ship on the ocean",
+		"desc": "I told you there's nothing here.",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "SAILING"
+			},{
+				"exit": "EAST",
+				"target": "SAILING"
+			},{
+				"exit": "SOUTH",
+				"target": "TOLDYOU"
+			},{
+				"exit": "WEST",
+				"target": "SAILING"
+			}
+
+		]
+	},"SAILING": {
+		"name": "ship on the ocean",
+		"desc": "You sail on, you can feel the wind in your hair.",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "SAILING"
+			},{
+				"exit": "EAST",
+				"target": "END"
+			},{
+				"exit": "SOUTH",
+				"target": "SAILING"
+			},{
+				"exit": "WEST",
+				"target": "SAILING"
+			}
+
+		]
+	},"END": {
+		"name": "island",
+		"desc": "Land ho! You and your crew drop the anchor and make it to the shore. \nConviently, there's a giant treasure chest right in the middle of the beach filled \nwith gold! You each take your cut and celebrate! (To quit the game type in 'quit')",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "END"
+			},{
+				"exit": "EAST",
+				"target": "END"
+			},{
+				"exit": "SOUTH",
+				"target": "END"
+			},{
+				"exit": "WEST",
+				"target": "END"
+			}
+
+		]
+	}
+
+
+} 
